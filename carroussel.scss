@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+$lightGrey: #1a1a1a;
+$white: #fff;
+$pink: #e82d8a;
+
+body {
+  padding: 32px 0;
+  background-color: black;
+}
+
+.partnersCarrouselWrapper {
+  padding: 0 16px;
+}
+
+.partnersCarrousel {
+  width: 100%;
+  position: relative;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.slickSlideCol {
+  padding: 0 32px;
+  height: auto !important;
+}
+
+.slideColInner {
+  background-color: $lightGrey;
+  text-align: center;
+  color: $white;
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.slideColInner div {
+  text-align: center;
+}
+
+.slick-dots li button:before {
+  font-size: 10px !important;
+  transition: 0.3s;
+}
+
+.slick-dots li button:hover::before {
+  color: $pink;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $pink !important;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: calc(50% - 13px);
+  background-color: transparent;
+  border: 0;
+}
+
+.slick-arrow img {
+  width: 20px;
+}
+
+.partnersCarrousel .customAutoPlaySlickSlidePrev {
+  left: -16px;
+}
+
+.partnersCarrousel .customAutoPlaySlickSlideNext {
+  right: -16px;
+}
+
+.partnersCarrousel p {
+  margin: 0;
+}
+
+.partnersCarrousel .clientName {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.partnersCarrousel .clientService {
+  font-size: 12px;
+  color: #ffffffcc;
+}
+
+.partnersCarrousel .slickSlideCol .internetVector {
+  width: 40px;
+}
+
+.partnersCarrousel a {
+  display: inline-flex;
+  color: $pink;
+  margin: 16px 0 32px;
+  text-decoration: none;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.slickSlideCol .aboutOutClient {
+  color: #ffffffcc;
+  margin: 0;
+  font-size: 20px;
+}
+
+.slickSlideCol .aboutOutClient strong {
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+    .slick-arrow {
+        position: absolute;
+        top: calc(50% - 16px);
+        background-color: transparent;
+        border: 0;
+        z-index: 400;
+      }
+
+    .partnersCarrousel .customAutoPlaySlickSlidePrev {
+    left: -10px;
+  }
+
+  .partnersCarrousel .customAutoPlaySlickSlideNext {
+    right: -10px;
+  }
+}
